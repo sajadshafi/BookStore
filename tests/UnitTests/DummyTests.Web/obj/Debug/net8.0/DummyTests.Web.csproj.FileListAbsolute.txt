@@ -116,3 +116,7 @@ E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\obj\De
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\obj\Debug\net8.0\ref\DummyTests.Web.dll
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Castle.Core.dll
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Moq.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Core.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Infrastructure.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Infrastructure.pdb
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Core.pdb

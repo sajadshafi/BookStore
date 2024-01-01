@@ -10,3 +10,7 @@ E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\obj\Debug\ne
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\obj\Debug\net8.0\refint\Dummy.Infrastructure.dll
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\obj\Debug\net8.0\Dummy.Infrastructure.pdb
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\obj\Debug\net8.0\ref\Dummy.Infrastructure.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\bin\Debug\net8.0\Dummy.Core.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\bin\Debug\net8.0\Dummy.Core.pdb
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\obj\Debug\net8.0\Dummy.Infrastructure.csproj.AssemblyReference.cache
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Infrastructure\obj\Debug\net8.0\Dummy.Infrastructure.csproj.CopyComplete
