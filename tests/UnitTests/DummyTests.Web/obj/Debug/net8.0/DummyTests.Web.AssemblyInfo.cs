@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DummyTests.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c590986cc7b49ae45b1be4083e1b19bd24ccf78c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DummyTests.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DummyTests.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

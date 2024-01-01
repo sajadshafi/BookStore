@@ -1,4 +1,6 @@
-﻿namespace Fixtures;
+﻿using Dummy.DTOs;
+
+namespace Fixtures;
 
 public class TodoFixtures
 {

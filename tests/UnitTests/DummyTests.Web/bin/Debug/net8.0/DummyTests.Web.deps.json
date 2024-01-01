@@ -10,6 +10,7 @@
         "dependencies": {
           "Dummy.Infrastructure": "1.0.0",
           "Dummy.Web": "1.0.0",
+          "Fixtures": "1.0.0",
           "FluentAssertions": "6.12.0",
           "Microsoft.NET.Test.Sdk": "17.6.0",
           "Moq": "4.20.70",
@@ -1153,6 +1154,14 @@
         "runtime": {
           "Dummy.Web.dll": {}
         }
+      },
+      "Fixtures/1.0.0": {
+        "dependencies": {
+          "Dummy.Core": "1.0.0"
+        },
+        "runtime": {
+          "Fixtures.dll": {}
+        }
       }
     }
   },
@@ -1880,6 +1889,11 @@
       "sha512": ""
     },
     "Dummy.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fixtures/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

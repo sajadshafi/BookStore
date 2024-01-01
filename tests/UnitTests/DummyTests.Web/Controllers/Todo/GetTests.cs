@@ -2,6 +2,7 @@ using System.Net;
 using Dummy.Controllers;
 using Dummy.DTOs;
 using Dummy.Interfaces;
+using Fixtures;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -14,13 +15,16 @@ public class Get_Tests {
     // Arrange
     var mockTodoService = new Mock<ITodoService>();
     var sut = new TodoController(mockTodoService.Object);
-
-    // Act
+    var dummyTodos = TodoFixtures.GetTodoList();
     mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>() {
       Success = true,
       Message = "Items found",
-      //Data = TodoFixtures
+      Data = dummyTodos
     });
+
+    // Act
+
+
     var result = sut.Get().Result as OkObjectResult;
 
     // Assert
@@ -35,13 +39,14 @@ public class Get_Tests {
     // Arrange
     var mockTodoService = new Mock<ITodoService>();
     var sut = new TodoController(mockTodoService.Object);
-
-    // Act
+    var dummyTodos = TodoFixtures.GetTodoList();
     mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>() {
       Success = true,
       Message = "Items found",
-      //Data = TodoFixtures.GetTodoList(),
+      Data = dummyTodos,
     });
+
+    // Act
 
     var result = sut.Get().Result as OkObjectResult;
 

@@ -120,3 +120,5 @@ E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\De
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Infrastructure.dll
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Infrastructure.pdb
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Dummy.Core.pdb
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Fixtures.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\tests\UnitTests\DummyTests.Web\bin\Debug\net8.0\Fixtures.pdb
