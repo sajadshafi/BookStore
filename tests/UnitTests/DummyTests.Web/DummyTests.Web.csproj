@@ -27,6 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Dummy.Web\Dummy.Web.csproj" />
     <ProjectReference Include="..\..\..\src\Dummy.Infrastructure\Dummy.Infrastructure.csproj" />
+    <ProjectReference Include="..\Fixtures\Fixtures.csproj" />
   </ItemGroup>
 
 </Project>

@@ -31,3 +31,7 @@ E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\obj\Debug\net8.0\refint
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\obj\Debug\net8.0\Dummy.Web.pdb
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\obj\Debug\net8.0\Dummy.Web.genruntimeconfig.cache
 E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\obj\Debug\net8.0\ref\Dummy.Web.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\bin\Debug\net8.0\Dummy.Core.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\bin\Debug\net8.0\Dummy.Infrastructure.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\bin\Debug\net8.0\Dummy.Infrastructure.pdb
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Web\bin\Debug\net8.0\Dummy.Core.pdb

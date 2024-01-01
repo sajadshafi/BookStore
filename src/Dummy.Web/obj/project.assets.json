@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Dummy.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Dummy.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dummy.Core.dll": {}
+        }
+      },
+      "Dummy.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dummy.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dummy.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dummy.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -420,10 +443,21 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Dummy.Core/1.0.0": {
+      "type": "project",
+      "path": "../Dummy.Core/Dummy.Core.csproj",
+      "msbuildProject": "../Dummy.Core/Dummy.Core.csproj"
+    },
+    "Dummy.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Dummy.Infrastructure/Dummy.Infrastructure.csproj",
+      "msbuildProject": "../Dummy.Infrastructure/Dummy.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Dummy.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -459,7 +493,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\CODING STUFF\\UnitTesting\\APIs\\DummyAPIs\\src\\Dummy.Infrastructure\\Dummy.Infrastructure.csproj": {
+              "projectPath": "E:\\CODING STUFF\\UnitTesting\\APIs\\DummyAPIs\\src\\Dummy.Infrastructure\\Dummy.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

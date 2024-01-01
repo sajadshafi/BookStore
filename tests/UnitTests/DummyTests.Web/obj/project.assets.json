@@ -1930,6 +1930,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Dummy.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "compile": {
@@ -1941,6 +1942,19 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Fixtures/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dummy.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Fixtures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Fixtures.dll": {}
+        }
       }
     }
   },
@@ -6248,12 +6262,18 @@
       "type": "project",
       "path": "../../../src/Dummy.Web/Dummy.Web.csproj",
       "msbuildProject": "../../../src/Dummy.Web/Dummy.Web.csproj"
+    },
+    "Fixtures/1.0.0": {
+      "type": "project",
+      "path": "../Fixtures/Fixtures.csproj",
+      "msbuildProject": "../Fixtures/Fixtures.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Dummy.Infrastructure >= 1.0.0",
       "Dummy.Web >= 1.0.0",
+      "Fixtures >= 1.0.0",
       "FluentAssertions >= 6.12.0",
       "Microsoft.NET.Test.Sdk >= 17.6.0",
       "Moq >= 4.20.70",
@@ -6300,6 +6320,9 @@
             },
             "E:\\CODING STUFF\\UnitTesting\\APIs\\DummyAPIs\\src\\Dummy.Web\\Dummy.Web.csproj": {
               "projectPath": "E:\\CODING STUFF\\UnitTesting\\APIs\\DummyAPIs\\src\\Dummy.Web\\Dummy.Web.csproj"
+            },
+            "E:\\CODING STUFF\\UnitTesting\\APIs\\DummyAPIs\\tests\\UnitTests\\Fixtures\\Fixtures.csproj": {
+              "projectPath": "E:\\CODING STUFF\\UnitTesting\\APIs\\DummyAPIs\\tests\\UnitTests\\Fixtures\\Fixtures.csproj"
             }
           }
         }

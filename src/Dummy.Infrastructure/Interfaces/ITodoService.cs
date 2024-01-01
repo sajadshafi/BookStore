@@ -5,7 +5,7 @@ namespace Dummy.Interfaces;
 public interface ITodoService {
 
   #region Functionality
-  Response<TodoDTO> GetAsync();
+  Task<Response<List<TodoDTO>>> GetAsync();
   #endregion
 
 }
