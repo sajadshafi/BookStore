@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "T3lPIviCAwMkIXxZ9pkGP1N0nqqDZ4cPXqnIqeQhWOA=",
+  "Source": "Dummy.Web",
+  "BasePath": "_content/Dummy.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
