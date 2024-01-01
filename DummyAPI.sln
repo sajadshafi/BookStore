@@ -5,29 +5,31 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{69A9A73B-7F91-4C0A-A2C2-76908C996176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummy.Core", "src\Dummy.Core\Dummy.Core.csproj", "{291B3660-BFED-4953-BD2A-98865824C230}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dummy.Core", "src\Dummy.Core\Dummy.Core.csproj", "{291B3660-BFED-4953-BD2A-98865824C230}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummy.Infrastructure", "src\Dummy.Infrastructure\Dummy.Infrastructure.csproj", "{548ABA64-313A-4B47-906A-6E15BEE20530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dummy.Infrastructure", "src\Dummy.Infrastructure\Dummy.Infrastructure.csproj", "{548ABA64-313A-4B47-906A-6E15BEE20530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummy.Web", "src\Dummy.Web\Dummy.Web.csproj", "{29C75A3D-AB3C-4819-9A5B-E7FAFF56FABD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dummy.Web", "src\Dummy.Web\Dummy.Web.csproj", "{29C75A3D-AB3C-4819-9A5B-E7FAFF56FABD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{89778D14-EC32-46AC-9B03-EFFBEE4354DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B91BDDC6-239D-400E-AF27-9E838EC79B9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyTests.Core", "tests\UnitTests\DummyTests.Core\DummyTests.Core.csproj", "{FBF12435-D855-4730-B0F6-CEC250C7BD58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DummyTests.Core", "tests\UnitTests\DummyTests.Core\DummyTests.Core.csproj", "{FBF12435-D855-4730-B0F6-CEC250C7BD58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyTests.Infrastructure", "tests\UnitTests\DummyTests.Infrastructure\DummyTests.Infrastructure.csproj", "{CD9E93F3-4C49-4B85-8B2D-7307EDE7B4F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DummyTests.Infrastructure", "tests\UnitTests\DummyTests.Infrastructure\DummyTests.Infrastructure.csproj", "{CD9E93F3-4C49-4B85-8B2D-7307EDE7B4F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyTests.Web", "tests\UnitTests\DummyTests.Web\DummyTests.Web.csproj", "{8F9E0CE1-F79D-4681-9784-D0B910DF10FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DummyTests.Web", "tests\UnitTests\DummyTests.Web\DummyTests.Web.csproj", "{8F9E0CE1-F79D-4681-9784-D0B910DF10FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D30D9FE-C092-4A60-A7AD-41FD348BF798}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{291B3660-BFED-4953-BD2A-98865824C230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,6 +56,9 @@ Global
 		{8F9E0CE1-F79D-4681-9784-D0B910DF10FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F9E0CE1-F79D-4681-9784-D0B910DF10FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F9E0CE1-F79D-4681-9784-D0B910DF10FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{291B3660-BFED-4953-BD2A-98865824C230} = {69A9A73B-7F91-4C0A-A2C2-76908C996176}

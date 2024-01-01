@@ -1,0 +1,12 @@
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\bin\Debug\net8.0\Dummy.Core.deps.json
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\bin\Debug\net8.0\Dummy.Core.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\bin\Debug\net8.0\Dummy.Core.pdb
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.AssemblyInfoInputs.cache
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.AssemblyInfo.cs
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.csproj.CoreCompileInputs.cache
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.sourcelink.json
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\refint\Dummy.Core.dll
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\Dummy.Core.pdb
+E:\CODING STUFF\UnitTesting\APIs\DummyAPIs\src\Dummy.Core\obj\Debug\net8.0\ref\Dummy.Core.dll
