@@ -6,6 +6,7 @@ public interface ITodoService {
 
   #region Functionality
   Task<Response<List<TodoDTO>>> GetAsync();
+  Task<Response<TodoDTO>> GetAsync(int id);
   #endregion
 
 }

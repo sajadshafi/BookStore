@@ -54,6 +54,10 @@ public class Get_Tests {
     result.Should().NotBeNull();
     result.Should().BeOfType<OkObjectResult>();
     result?.Value.Should().BeOfType<Response<List<TodoDTO>>>();
+
+    var responseValue = (Response<List<TodoDTO>>)result.Value;
+
+    responseValue.Data.Count.Should().BeGreaterThan(0);
   }
 
   [Fact]

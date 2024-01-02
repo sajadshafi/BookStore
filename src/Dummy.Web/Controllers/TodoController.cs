@@ -18,7 +18,10 @@ public class TodoController(ITodoService todoService) : ControllerBase {
   }
 
   [HttpGet("{id}")]
-  public IActionResult Get(int id) {
-    return NotFound();
+  public async Task<IActionResult> Get(int id) {
+    var result = await _todoService.GetAsync(id);
+    if(result.Success && result.Data == default ) {
+      return NotFound();
+    } else return Ok(result);
   }
 }

@@ -13,4 +13,15 @@ public class TodoFixtures
         new TodoDTO() { Id=4, Title="Read 10 pages from Atomic Habbits", Description="lorem ipsum", IsCompleted = false },
       ];
   }
+
+  public static TodoDTO GetSingleTodo()
+  {
+    return new TodoDTO()
+    {
+      Id = 1,
+      Title = "Bring eggs from market",
+      Description = "lorem ipsum",
+      IsCompleted = false
+    };
+  }
 }

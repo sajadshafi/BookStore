@@ -17,4 +17,8 @@ public class TodoService : ITodoService {
 
     };
   }
+
+  public async Task<Response<TodoDTO>> GetAsync(int id) {
+    throw new NotImplementedException();
+  }
 }
