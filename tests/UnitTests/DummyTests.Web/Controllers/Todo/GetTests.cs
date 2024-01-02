@@ -9,87 +9,68 @@ using Moq;
 
 namespace Dummy.UnitTests.Controllers.Todo;
 
-public class Get_Tests {
+public class GetTests {
+
+  #region Private Fields
+  private readonly TodoController _sut;
+  private readonly Mock<ITodoService> _mockTodoService;
+
+  #endregion
+  #region Constructors
+  public GetTests() {
+
+    _mockTodoService = new Mock<ITodoService>();
+    _sut = new TodoController(_mockTodoService.Object);
+
+  }
+  #endregion
+
+
   [Fact]
-  public void Get_OnSuccess_ReturnsOK() {
+  public void Get_ReturnsOK_When_ItemsFound() {
     // Arrange
-    var mockTodoService = new Mock<ITodoService>();
-    var sut = new TodoController(mockTodoService.Object);
     var dummyTodos = TodoFixtures.GetTodoList();
-    mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>() {
+    var expected = new Response<List<TodoDTO>>() {
       Success = true,
       Message = "Items found",
       Data = dummyTodos
-    });
+    };
+    _mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(expected);
 
     // Act
-
-
-    var result = sut.Get().Result as OkObjectResult;
+    var result = _sut.Get().Result as OkObjectResult;
 
     // Assert
-    result.Should().NotBeNull();
-    result.Should().BeOfType<OkObjectResult>();
-
-    result?.StatusCode.Should().Be((int)HttpStatusCode.OK);
+    result.Should().NotBeNull().And.BeOfType<OkObjectResult>().Which.StatusCode.Should().Be((int)HttpStatusCode.OK);
+    result.Value.Should().BeOfType<Response<List<TodoDTO>>>().Which.Data.Should().NotBeEmpty();
   }
 
   [Fact]
-  public void Get_OnSuccess_ResponseOfListOfTodos() {
+  public void Get_ReturnsNotFound_When_NoItemsAvailable() {
     // Arrange
-    var mockTodoService = new Mock<ITodoService>();
-    var sut = new TodoController(mockTodoService.Object);
-    var dummyTodos = TodoFixtures.GetTodoList();
-    mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>() {
-      Success = true,
-      Message = "Items found",
-      Data = dummyTodos,
-    });
-
-    // Act
-
-    var result = sut.Get().Result as OkObjectResult;
-
-    // Assert
-    result.Should().NotBeNull();
-    result.Should().BeOfType<OkObjectResult>();
-    result?.Value.Should().BeOfType<Response<List<TodoDTO>>>();
-
-    var responseValue = (Response<List<TodoDTO>>)result.Value;
-
-    responseValue.Data.Count.Should().BeGreaterThan(0);
-  }
-
-  [Fact]
-  public void Get_OnEmptyResult_ReturnsNotFound() {
-    // Arrange
-    var mockTodoService = new Mock<ITodoService>();
-    var sut = new TodoController(mockTodoService.Object);
-
-    // Act
-    mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>() {
+    var expected = new Response<List<TodoDTO>>() {
       Success = true,
       Data = [],
       Message = "No task items available",
-    });
-    var result = sut.Get().Result;
+    };
+    _mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(expected);
+
+    // Act
+    var result = _sut.Get().Result;
 
     // Assert
-    result.Should().NotBeNull();
-    result.Should().BeOfType<NotFoundResult>();
+    result.Should().NotBeNull().And.BeOfType<NotFoundResult>();
   }
 
   [Fact]
-  public void Get_OnSuccess_InvokesTodoServicesExactlyOnce() {
+  public void Get_InvokesTodoServicesExactlyOnce() {
     // Arrange
-    var mockTodoService = new Mock<ITodoService>();
-    var sut = new TodoController(mockTodoService.Object);
 
     // Act
-    mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>());
-    var result = sut.Get().Result as OkObjectResult;
+    _mockTodoService.Setup(s => s.GetAsync()).ReturnsAsync(new Response<List<TodoDTO>>());
+    var result = _sut.Get().Result as OkObjectResult;
 
     // Assert
-    mockTodoService.Verify(service => service.GetAsync(), Times.Once);
+    _mockTodoService.Verify(service => service.GetAsync(), Times.Once);
   }
 }

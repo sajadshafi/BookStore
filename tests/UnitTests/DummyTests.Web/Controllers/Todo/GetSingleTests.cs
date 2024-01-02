@@ -9,7 +9,7 @@ using Fixtures;
 
 namespace Dummy.UnitTests.Controllers.Todo;
 
-public class GetSingle_Tests {
+public class GetSingleTests {
 
   #region Private Fields
   private readonly TodoController _sut;
@@ -17,7 +17,7 @@ public class GetSingle_Tests {
 
   #endregion
   #region Constructors
-  public GetSingle_Tests() {
+  public GetSingleTests() {
 
     _mockTodoService = new Mock<ITodoService>();
     _sut = new TodoController(_mockTodoService.Object);
@@ -26,7 +26,7 @@ public class GetSingle_Tests {
   #endregion
 
   [Fact]
-  public void GetSingle_OnSuccess_Returns200() {
+  public void GetSingle_ReturnsOK_When_ItemFound() {
     // Given
     _mockTodoService.Setup(service => service.GetAsync(1)).ReturnsAsync(new Response<TodoDTO>() {
       Success = true,
@@ -35,17 +35,15 @@ public class GetSingle_Tests {
     });
 
     // When
-    var result = _sut.Get(1).Result;
+    var result = _sut.Get(1).Result as OkObjectResult;
 
     // Then
-    result.Should().NotBeNull();
-    result.Should().BeOfType<OkObjectResult>();
-    var resultObject = (OkObjectResult)result;
-    resultObject.StatusCode.Should().Be((int)HttpStatusCode.OK);
+    result.Should().NotBeNull().And.BeOfType<OkObjectResult>().Which.StatusCode.Should().Be((int)HttpStatusCode.OK);
+    result.Value.Should().NotBeNull().And.BeOfType<Response<TodoDTO>>().Which.Data.Should().NotBe(default).And.NotBeNull();
   }
 
   [Fact]
-  public void GetSingle_OnNoItem_ReturnsNotFound() {
+  public void GetSingle_ReturnsNotFound_When_ItemNotAvailable() {
     // Given
     _mockTodoService.Setup(service => service.GetAsync(1)).ReturnsAsync(new Response<TodoDTO>() {
       Success = true,
@@ -63,28 +61,23 @@ public class GetSingle_Tests {
     resultObject.StatusCode.Should().Be((int)HttpStatusCode.NotFound);
   }
 
-  [Fact]
-  public void GetSingle_OnSuccess_ReturnsSingleItem() {
+  [Theory]
+  [InlineData(1)]
+  [InlineData(2)]
+  [InlineData(3)]
+  public void GetSingle_InvokesTodoServicesExactlyOnce(int id) {
     // Arrange
-    _mockTodoService.Setup(service => service.GetAsync(1)).ReturnsAsync(new Response<TodoDTO>() {
+    var expected = new Response<TodoDTO>() {
       Success = true,
       Message = "Item found",
-      Data = TodoFixtures.GetSingleTodo(),
-    });
-
+      Data = TodoFixtures.GetSingleTodo(id),
+    };
     // Act
-    var result = _sut.Get(1).Result;
+    _mockTodoService.Setup(service => service.GetAsync(id)).ReturnsAsync(expected);
+    var result = _sut.Get(id).Result as OkObjectResult;
 
     // Assert
-    result.Should().NotBeNull();
-    result.Should().BeOfType<OkObjectResult>();
-    var resultObject = (OkObjectResult)result;
-
-    resultObject.StatusCode.Should().Be((int)HttpStatusCode.OK);
-    resultObject.Value.Should().BeOfType(typeof(Response<TodoDTO>));
-    var responseValue = (Response<TodoDTO>)resultObject.Value;
-
-    responseValue.Data.Should().NotBeNull();
-    responseValue.Data.Should().NotBe(default(TodoDTO));
+    _mockTodoService.Verify(service => service.GetAsync(id), Times.Once);
   }
+
 }

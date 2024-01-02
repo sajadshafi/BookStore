@@ -14,11 +14,11 @@ public class TodoFixtures
       ];
   }
 
-  public static TodoDTO GetSingleTodo()
+  public static TodoDTO GetSingleTodo(int id = 1)
   {
     return new TodoDTO()
     {
-      Id = 1,
+      Id = id,
       Title = "Bring eggs from market",
       Description = "lorem ipsum",
       IsCompleted = false
