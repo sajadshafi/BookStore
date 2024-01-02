@@ -55,10 +55,7 @@ public class GetSingleTests {
     var result = _sut.Get(1).Result;
 
     // Then
-    result.Should().NotBeNull();
-    result.Should().BeOfType<NotFoundResult>();
-    var resultObject = (NotFoundResult)result;
-    resultObject.StatusCode.Should().Be((int)HttpStatusCode.NotFound);
+    result.Should().NotBeNull().And.BeOfType<NotFoundResult>().Which.StatusCode.Should().Be((int)HttpStatusCode.NotFound);
   }
 
   [Theory]

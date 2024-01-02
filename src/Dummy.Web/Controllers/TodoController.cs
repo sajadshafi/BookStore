@@ -8,6 +8,15 @@ namespace Dummy.Controllers;
 public class TodoController(ITodoService todoService) : ControllerBase {
   private readonly ITodoService _todoService = todoService;
 
+  public async Task<IActionResult> Delete(int id) {
+    var result = await _todoService.DeleteAsync(id);
+
+    if(!result.Success && (result.Data == default)) {
+      return NotFound();
+    }
+    return Ok(result);
+  }
+
   [HttpGet]
   public async Task<IActionResult> Get() {
     var result = await _todoService.GetAsync();
@@ -20,8 +29,9 @@ public class TodoController(ITodoService todoService) : ControllerBase {
   [HttpGet("{id}")]
   public async Task<IActionResult> Get(int id) {
     var result = await _todoService.GetAsync(id);
-    if(result.Success && result.Data == default ) {
+    if(result.Success && result.Data == default) {
       return NotFound();
-    } else return Ok(result);
+    }
+    return Ok(result);
   }
 }

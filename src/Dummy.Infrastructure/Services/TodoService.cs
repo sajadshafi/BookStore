@@ -4,6 +4,10 @@ using Dummy.Interfaces;
 namespace Dummy.Services;
 
 public class TodoService : ITodoService {
+  public Task<Response<int>> DeleteAsync(int id) {
+    throw new NotImplementedException();
+  }
+
   public async Task<Response<List<TodoDTO>>> GetAsync() {
     return new Response<List<TodoDTO>>() {
       Success = true,
