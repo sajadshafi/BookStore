@@ -3,6 +3,7 @@ using Dummy.DTOs;
 namespace Dummy.Interfaces;
 
 public interface ITodoService {
+  Task<Response<TodoDTO>> AddAsync(TodoDTO todo);
   Task<Response<int>> DeleteAsync(int id);
 
   #region Functionality

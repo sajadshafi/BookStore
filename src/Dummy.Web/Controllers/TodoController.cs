@@ -1,3 +1,5 @@
+using Dummy.DTOs;
+using Dummy.Helpers;
 using Dummy.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +10,16 @@ namespace Dummy.Controllers;
 public class TodoController(ITodoService todoService) : ControllerBase {
   private readonly ITodoService _todoService = todoService;
 
+  [HttpPut]
+  public async Task<IActionResult> Add(TodoDTO model) {
+    var isValid = model.IsValidTodo();
+    if(!isValid) return BadRequest();
+
+    var result = await _todoService.AddAsync(model);
+    return Ok(result);
+  }
+
+  [HttpDelete("{id}")]
   public async Task<IActionResult> Delete(int id) {
     var result = await _todoService.DeleteAsync(id);
 

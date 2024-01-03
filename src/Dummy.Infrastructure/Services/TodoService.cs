@@ -4,7 +4,19 @@ using Dummy.Interfaces;
 namespace Dummy.Services;
 
 public class TodoService : ITodoService {
-  public Task<Response<int>> DeleteAsync(int id) {
+
+  #region Private Fields
+  #endregion
+
+  #region Constructors
+  #endregion
+
+  #region Crud Functionality
+  public async Task<Response<TodoDTO>> AddAsync(TodoDTO todo) {
+    throw new NotImplementedException();
+  }
+
+  public async Task<Response<int>> DeleteAsync(int id) {
     throw new NotImplementedException();
   }
 
@@ -25,4 +37,5 @@ public class TodoService : ITodoService {
   public async Task<Response<TodoDTO>> GetAsync(int id) {
     throw new NotImplementedException();
   }
+  #endregion
 }
