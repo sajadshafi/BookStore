@@ -1,4 +1,4 @@
-using Dummy.DTOs;
+using Dummy.Application.DTOs;
 
 namespace Dummy.Helpers;
 

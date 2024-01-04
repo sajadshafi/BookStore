@@ -1,7 +1,7 @@
-using Dummy.DTOs;
-using Dummy.Interfaces;
+using Dummy.Application.DTOs;
+using Dummy.Infrastructure.Interfaces;
 
-namespace Dummy.Services;
+namespace Dummy.Infrastructure.Services;
 
 public class TodoService : ITodoService {
 

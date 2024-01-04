@@ -1,6 +1,6 @@
-using Dummy.DTOs;
+using Dummy.Application.DTOs;
 using Dummy.Helpers;
-using Dummy.Interfaces;
+using Dummy.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dummy.Controllers;

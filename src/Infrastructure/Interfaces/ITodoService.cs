@@ -1,6 +1,6 @@
-using Dummy.DTOs;
+using Dummy.Application.DTOs;
 
-namespace Dummy.Interfaces;
+namespace Dummy.Infrastructure.Interfaces;
 
 public interface ITodoService {
   Task<Response<TodoDTO>> AddAsync(TodoDTO todo);

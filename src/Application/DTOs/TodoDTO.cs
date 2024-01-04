@@ -1,4 +1,4 @@
-namespace Dummy.DTOs;
+﻿namespace Dummy.Application.DTOs;
 
 public class TodoDTO {
   public int Id { get; set; }

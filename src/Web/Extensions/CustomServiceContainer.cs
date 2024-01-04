@@ -1,7 +1,7 @@
-using Dummy.Interfaces;
-using Dummy.Services;
+using Dummy.Infrastructure.Interfaces;
+using Dummy.Infrastructure.Services;
 
-namespace Dummy.Extensions;
+namespace Dummy.Web.Extensions;
 
 public static class CustomServiceContainer {
   public static IServiceCollection AddCustomServices(this IServiceCollection services) {

@@ -1,6 +1,6 @@
 using Dummy.Controllers;
-using Dummy.DTOs;
-using Dummy.Interfaces;
+using Dummy.Application.DTOs;
+using Dummy.Infrastructure.Interfaces;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;

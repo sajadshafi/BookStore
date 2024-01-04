@@ -1,4 +1,4 @@
-using Dummy.Extensions;
+using Dummy.Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
