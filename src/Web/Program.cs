@@ -1,4 +1,5 @@
-using Dummy.Web.Extensions;
+using Application;
+using Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Adding Custom services
-builder.Services.AddCustomServices();
+var configuration = builder.Configuration;
 
+builder.Services.AddInfrastructure(configuration);
+builder.Services.AddServices(configuration);
+
+// Adding Custom services
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,5 +1,5 @@
-## DummyAPI: Learning Unit Testing with .NET Core WebAPI
-Welcome to DummyAPI, a simple .NET Core WebAPI project crafted specifically for hands-on learning and understanding unit testing methodologies.
+## Book Store: Learning Unit Testing with .NET Core WebAPI
+Welcome to Book Store, a simple .NET Core WebAPI project crafted specifically for hands-on learning and understanding unit testing methodologies.
 
 ### Purpose:
 This project serves as an educational resource for developers aiming to grasp the essentials of unit testing within the .NET Core environment. It provides a practical playground to explore and implement various unit testing frameworks and techniques.
